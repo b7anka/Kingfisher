@@ -60,6 +60,15 @@ public struct RetrieveImageResult {
     /// This can be a time-consuming action, so if you need to use the data for multiple times, it is suggested to hold
     /// it and prevent keeping calling this too frequently.
     public let data: () -> Data?
+    
+    public init(image: KFCrossPlatformImage, cacheType: CacheType, source: Source, originalSource: Source, data: @escaping () -> Data?) {
+        self.image = image
+        self.cacheType = cacheType
+        self.source = source
+        self.originalSource = originalSource
+        self.data = data
+    }
+    
 }
 
 /// A struct that stores some related information of an `KingfisherError`. It provides some context information for
