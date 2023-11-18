@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Kingfisher.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Demo/Kingfisher-Demo.xcodeproj">
-   </FileRef>
 </Workspace>

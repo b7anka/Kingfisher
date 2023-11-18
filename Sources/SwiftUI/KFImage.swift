@@ -83,24 +83,4 @@ extension KFImage {
         return self
     }
 }
-
-#if DEBUG
-@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
-struct KFImage_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            KFImage.url(URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png")!)
-                .onSuccess { r in
-                    print(r)
-                }
-                .placeholder { p in
-                    ProgressView(p)
-                }
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding()
-        }
-    }
-}
-#endif
 #endif

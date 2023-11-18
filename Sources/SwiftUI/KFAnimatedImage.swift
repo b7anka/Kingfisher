@@ -75,22 +75,4 @@ public struct KFAnimatedImageViewRepresenter: UIViewRepresentable, KFImageHoldin
         uiView.image = image
     }
 }
-
-#if DEBUG
-@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
-struct KFAnimatedImage_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            KFAnimatedImage(source: .network(URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/GIF/1.gif")!))
-                .onSuccess { r in
-                    print(r)
-                }
-                .placeholder {
-                    ProgressView()
-                }
-                .padding()
-        }
-    }
-}
-#endif
 #endif
